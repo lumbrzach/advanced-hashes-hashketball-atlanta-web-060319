@@ -246,7 +246,7 @@ def big_shoe_rebounds
         # binding.pry
 
         playershoe << playername.split("").sort_by
-          binding.pry
+          # binding.pry
       end
     end
   end
