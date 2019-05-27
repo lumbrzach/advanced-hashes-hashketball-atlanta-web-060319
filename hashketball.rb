@@ -235,7 +235,7 @@ def player_stats (name)
   return playstats
 end
 
-def player_biggest_shoe_size
+def big_shoe_rebounds
 players.sort_by {|player| player.fetch(:shoe) }.last
 binding.pry
 end
