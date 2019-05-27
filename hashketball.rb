@@ -251,7 +251,7 @@ def big_shoe_rebounds
           # binding.pry
             stats.each do |statistic, int|
               binding.pry
-              if stat == :shoe
+              if statistic == :shoe
                 if int > shoe_size
                   shoe_size = int
                   player_name = player
