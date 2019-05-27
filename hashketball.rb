@@ -249,7 +249,7 @@ def big_shoe_rebounds
       if info.class == Hash
         info.each do |player, stats|
           # binding.pry
-            stats.each do |stat, int|
+            stats.each do |statistic, int|
               binding.pry
               if stat == :shoe
                 if int > shoe_size
@@ -259,7 +259,7 @@ def big_shoe_rebounds
               end
             end
           end
-        return hash[location][attribute][player_name][:rebounds]
+        return game_hash[location][attribute][player_name][:rebounds]
       end
     end
   end
