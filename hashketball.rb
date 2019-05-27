@@ -245,7 +245,7 @@ def big_shoe_rebounds
       stats.each do |statistic, value|
         # binding.pry
 
-        playershoe << playername.to_a.sort_by(stats[:shoe])
+        playershoe << playername.split("").sort_by(stats[:shoe])
           binding.pry
       end
     end
