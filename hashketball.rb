@@ -235,20 +235,24 @@ def player_stats (name)
   return playstats
 end
 
-def big_shoe_rebounds
-  playershoe = []
-  rebounds = ""
-  game_hash.each do |location, attributes|
+def player_biggest_shoe_size
+players.sort_by {|player| player.fetch(:shoe) }.last
+end
+
+# def big_shoe_rebounds
+  # playershoe = []
+  # rebounds = ""
+  # game_hash.each do |location, attributes|
     # binding.pry
-    attributes[:players].each do |playername, stats|
+    # attrib.utes[:players].each do |playername, stats|
       # binding.pry
-      stats.each do |statistic, value|
+      # stats.each do |statistic, value|
         # binding.pry
 
-        playershoe << playername.split("").sort_by
+        # playershoe << playername.split("").sort_by
           # binding.pry
-      end
-    end
-  end
-  return playershoe
-end
+      # end
+    # end
+  # end
+  # return playershoe
+# end
