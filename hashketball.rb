@@ -243,10 +243,10 @@ def big_shoe_rebounds
     attributes[:players].each do |playername, stats|
       # binding.pry
       stats.each do |statistic, value|
-        binding.pry
+        # binding.pry
 
         playershoe << playername.sort_by(stats[:shoe])
-          # binding.pry
+          binding.pry
       end
     end
   end
