@@ -220,6 +220,8 @@ def player_numbers (teamname)
   return team_numbers
 end
 
+
+
 def player_stats (name)
   playstats = {}
   game_hash.each do |location, attributes|
@@ -240,8 +242,26 @@ def player_stats (name)
 end
 
 def big_shoe_rebounds
-players.sort_by {|player| player.fetch(:shoe) }.last
-binding.pry
+  player_name = ""
+  shoe_size = 0
+  game_hash.each do |location, attributes|
+    attributes.each do |attribute, info|
+      if info.class == Hash
+        info.each do |player, stats|
+          binding.pry
+            stats.each do |stat, int|
+              if stat == :shoe
+                if int > shoe_size
+                  shoe_size = int
+                  player_name = player
+                end
+              end
+            end
+          end
+        return hash[location][attribute][player_name][:rebounds]
+      end
+    end
+  end
 end
 
 # def big_shoe_rebounds
